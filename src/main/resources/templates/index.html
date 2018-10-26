@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome</h1>
+
+<a href="/deposit">Deposit</a><br>
+<a href="/withdrawal">Withdrawal</a><br>
+<a href="/showHistory">History</a>
+
+
+<table>
+<tr>
+
+
+    <th>Account #</th>
+    <th>Balance</th>
+
+
+</tr>
+
+<tr th:each="account :${accounts}">
+    <td th:text="${account.accountNumber}"></td>
+    <td th:text ="${account.balance}"></td>
+<td>
+
+
+</td>
+
+
+    </tr>
+</table>
+
+
+
+
+</body>
+</html>
